@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/santjikhata/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/santjikhata/static/js/main.8d34d551.chunk.js",
+    "main.js.map": "/santjikhata/static/js/main.8d34d551.chunk.js.map",
+    "runtime-main.js": "/santjikhata/static/js/runtime-main.4055aa41.js",
+    "runtime-main.js.map": "/santjikhata/static/js/runtime-main.4055aa41.js.map",
+    "static/js/2.d2e2f8f3.chunk.js": "/santjikhata/static/js/2.d2e2f8f3.chunk.js",
+    "static/js/2.d2e2f8f3.chunk.js.map": "/santjikhata/static/js/2.d2e2f8f3.chunk.js.map",
+    "index.html": "/santjikhata/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/santjikhata/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.d2e2f8f3.chunk.js.LICENSE.txt": "/santjikhata/static/js/2.d2e2f8f3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4055aa41.js",
+    "static/js/2.d2e2f8f3.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.8d34d551.chunk.js"
+  ]
+}
