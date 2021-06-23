@@ -3,7 +3,7 @@ import { khata } from "./khata";
 
 //'npm run deploy' before push
 function App() {
-  const [message, setMessage] = useState("....No Khatas Yet");
+  const [message, setMessage] = useState("....No Kathas Yet");
   const [ang, setAng] = useState("");
 
   function khataForAng(angNum) {
@@ -39,6 +39,10 @@ function App() {
     <div>
       <div>Sant Giani Gurbachan Singh Ji Bhindran Wale ਕਥਾ</div>
       <div>Enter the Ang Number for which you want ਕਥਾ of:</div>
+      <h3>
+        ਉਹ ਅੰਗ ਨੰਬਰ ਦਰਜ ਕਰੋ ਜਿਸ ਲਈ ਤੁਸੀਂ ਸੰਤ ਗਿਆਨੀ ਗੁਰਬਚਨ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਵਾਲੇ
+        ਦੁਆਰਾ ਕਥਾ ਸੁਣਨਾ ਚਾਹੁੰਦੇ ਹੋ:
+      </h3>
       <div>
         <form onSubmit={(e) => e.preventDefault()}>
           <input
