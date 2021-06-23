@@ -3,7 +3,7 @@ import { khata } from "./khata";
 
 //'npm run deploy' before push
 function App() {
-  const [message, setMessage] = useState("....No Kathas Yet");
+  const [message, setMessage] = useState("");
   const [ang, setAng] = useState("");
 
   function khataForAng(angNum) {
