@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { khata } from "./khata";
+import { KATHAS } from "./KATHAS";
 
 //'npm run deploy' before push
 function App() {
@@ -13,18 +13,34 @@ function App() {
     function whatToReturn() {
       let a;
       try {
-        a = khata[angNum].map((i) => {
+        a = KATHAS[angNum].map((katha) => {
           return (
-            <li key={randId()}>
-              <div>
+            <div key={randId()}>
+              <h2>{katha.title}</h2>
+              <ol>
+                {katha.links.map((link) => {
+                  return (
+                    <li key={randId()}>
+                      <a href={link} target="_blank" rel="noopener noreferrer">
+                        {link}
+                      </a>
+
+                      <video width="500" height="60" controls name="media">
+                        <source src={link} type="audio/mpeg" />
+                      </video>
+                    </li>
+                  );
+                })}
+              </ol>
+              {/* <div>
                 <a href={i} target="_blank" rel="noopener noreferrer">
-                  {i}
+                  {i.title}
                 </a>
               </div>
               <video width="500" height="60" controls name="media">
                 <source src={i} type="audio/mpeg" />
-              </video>
-            </li>
+              </video> */}
+            </div>
           );
         });
       } catch (e) {
@@ -32,7 +48,7 @@ function App() {
       }
       return a;
     }
-    return <ol>{whatToReturn()}</ol>;
+    return <div>{whatToReturn()}</div>;
   }
 
   return (
