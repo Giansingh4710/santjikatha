@@ -30,27 +30,40 @@ links=[]
 topOfObj=0
 for i in range(len(a)):
     if "{" in a[i]:
-        title=a[i].split(":")[0]
+        title=a[i].split(":")[0].strip()[1:-1]
+        if title=="": # for when key is on one like and the '{' starts on next line 
+            title=a[i-1].split(":")[0].strip()[1:-1]
         titles.append(title)
         topOfObj=i+1
     if "}" in a[i]:
         link=a[topOfObj:i]
-        allLinksInThisTitle=[]
+        allLinksInThisTitle=set()
         theLinks=link[1:-1]
         for j in theLinks:
-            allLinksInThisTitle.append(j.strip())
+            allLinksInThisTitle.add(j.strip()[1:-2])
         links.append(allLinksInThisTitle)
-print(len(titles))
-print(len(links))
+#len of titles and links should be same. They are paried by index
 
 ansObj={}
 for i in range(len(links)):
     if titles[i] not in ansObj:
-        ansObj[titles[i]]={"links":links[i]}
+        ansObj[titles[i]]=links[i]
     else:
-        ansObj[titles[i]]["links"]+=links[i]
+        ansObj[titles[i]]+=links[i]
+
+
+
 import pyperclip
-pyperclip.copy(str(ansObj))
+ansToCopy="export const KATHAS_BY_KEYWORD = {\n"
+for i in ansObj:
+    ansToCopy+=f"'{i}':"+"{\n"
+    ansToCopy+="links:[\n"
+    for j in ansObj[i]:
+        ansToCopy+=f"'{j}',\n"
+    ansToCopy+="]"
+    ansToCopy+="},\n"
+ansToCopy+="}"
+pyperclip.copy(ansToCopy)
 print(len(ansObj))
 
 
