@@ -1,4 +1,4 @@
-export const KATHAS = {
+export const KATHAS_BY_ANG = {
   SantGianiGurbachanSinghJi: {
     1: [
       {
