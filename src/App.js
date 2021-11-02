@@ -213,17 +213,13 @@ function App() {
           <button
             type="submit"
             onClick={() => {
-              if (keyword.split(" ").length === 1) {
-                setKeyWordMessage(() => {
-                  let theKhata = kathaForKeyword(keyword);
-                  if (theKhata.length === 0) {
-                    return "No katha titles with '" + keyword + "' in it";
-                  }
-                  return <ol>{theKhata}</ol>;
-                });
-              } else {
-                alert("Please enter only 1 word");
-              }
+              setKeyWordMessage(() => {
+                let theKhata = kathaForKeyword(keyword);
+                if (theKhata.length === 0) {
+                  return "No katha titles with '" + keyword + "' in it";
+                }
+                return <ol>{theKhata}</ol>;
+              });
             }}
           >
             Submit
