@@ -214,7 +214,7 @@ function App() {
             type="submit"
             onClick={() => {
               setKeyWordMessage(() => {
-                let theKhata = kathaForKeyword(keyword);
+                let theKhata = kathaForKeyword(keyword.trim());
                 if (theKhata.length === 0) {
                   return "No katha titles with '" + keyword + "' in it";
                 }
