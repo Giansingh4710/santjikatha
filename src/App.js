@@ -216,7 +216,7 @@ function App() {
               setKeyWordMessage(() => {
                 let theKhata = kathaForKeyword(keyword.trim());
                 if (theKhata.length === 0) {
-                  return "No katha titles with '" + keyword + "' in it";
+                  return "No katha titles with '" + keyword.trim() + "' in it";
                 }
                 return <ol>{theKhata}</ol>;
               });
