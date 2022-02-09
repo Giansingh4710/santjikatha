@@ -1,7 +1,7 @@
 [Katha Of Sant Giani Gurbachan Singh Ji](https://santjikatha.xyz)
 
 This website makes it easier to listen to the katha(discourse
-and explanation of Gurbani(the Sikh Scriptures)) of Sant Giani Gurbachan Singh Ji
+and explanation of Gurbani(the Sikh Scriptures)) of Sant Giani Gurbachan Singh Ji 
 who was an Amazing Scholor and a Great Being that came to this world to help humanity.
 The audios of the katha are take from www.gurmatveechar.com
 
